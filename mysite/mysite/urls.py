@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include # 다른 URLconf참조
 
 urlpatterns = [
+    path('',include('polls.urls')),
     path("polls/", include("polls.urls")), # 주소의 뒷부분을 하위 폴더로 전송
     path("admin/", admin.site.urls),
 ]
