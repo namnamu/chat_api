@@ -1,0 +1,10 @@
+{% if latest_question_list %} <!--앱의 views에서 선언한 변수.-->
+    <ul>
+    {% for question in latest_question_list %}
+        <!-- 한 행(question으로 선언된)에서 id를 구별자(pk)로 잡아서 user_key라는 변수를 보여준다.  -->
+        <li style='background'>{{ question.user_key }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

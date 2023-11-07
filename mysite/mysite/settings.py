@@ -52,11 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "mysite.urls"
 
+# 각 어플의 하위 "templates"디렉토리를 탐색
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
-        "APP_DIRS": True,
+        "APP_DIRS": True, # 템플릿을 사용하겠다.
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
