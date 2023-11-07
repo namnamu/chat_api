@@ -18,7 +18,7 @@ class Question_Answer(models.Model):
     Answer = models.CharField(max_length=200)
     upvotes = models.IntegerField(default=0)
     downvotes = models.IntegerField(default=0)
-    #is_accepted
+    is_accepted=models.BooleanField(default=False)
     view_count = models.IntegerField(default=0)
     Keywords = models.CharField(max_length=200)
     Date = models.DateTimeField("date published") 

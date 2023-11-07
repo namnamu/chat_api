@@ -8,7 +8,7 @@ from django.template import loader
 from .models import Question_Answer
 
 def index(request):
-    latest_question_list = Question_Answer.objects.order_by("-ID")[:5]
+    latest_question_list = Question_Answer.objects.order_by("-ID")[:5] # ID: 모델의 컬럼 명
     template = loader.get_template("polls/index.html")
     context = {
         "latest_question_list": latest_question_list,
